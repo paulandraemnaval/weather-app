@@ -107,7 +107,7 @@ const MainDashboard = ({
       style={{ backgroundImage: `url(${bgimg})` }}
     >
       <div className="flex flex-1 rounded-md flex-start flex-col px-6 bg-transparent z-10">
-        y<Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <div className="flex flex-col gap-2">
             <div className="flex w-full items-center gap-2 h-fit">
               <Image
