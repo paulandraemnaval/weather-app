@@ -4,17 +4,18 @@ const useTodayTemps = () => {
   const { weatherData } = useGlobalContext();
 
   const hourlyTemp =
-    weatherData?.forecast?.forecastday[0]?.hour?.map((hour) => hour.temp_c) ||
-    [];
+    weatherData?.forecast?.forecastday[0]?.hour?.map(
+      (hour: any) => hour.temp_c
+    ) || [];
 
   const hourlyHeatIndex =
     weatherData?.forecast?.forecastday[0]?.hour?.map(
-      (hour) => hour.heatindex_c
+      (hour: any) => hour.heatindex_c
     ) || [];
 
   const hourlyPrecip =
     weatherData?.forecast?.forecastday[0]?.hour?.map(
-      (hour) => hour.precip_mm
+      (hour: any) => hour.precip_mm
     ) || [];
 
   return {
