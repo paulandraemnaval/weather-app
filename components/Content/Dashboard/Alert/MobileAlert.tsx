@@ -42,7 +42,7 @@ const MobileAlert: React.FC<Props> = ({ alerts }) => {
     <div
       className={` p-3 border-l-4 ${borderColor} rounded-md shadow-md ${bgColor} flex items-start gap-3 animate-slide-up h-fit w-fit sm:hidden`}
     >
-      {isSevere ? <ShieldAlert size={22} /> : <AlertTriangle size={22} />}
+      {isSevere ? <ShieldAlert size={20} /> : <AlertTriangle size={20} />}
 
       <div className="flex-1">
         <h2 className="text-sm font-bold">{mostSevereAlert.event}</h2>
