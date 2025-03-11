@@ -1,7 +1,7 @@
 "use client";
 import { WeatherApiResponse } from "@/Types/WeatherApIResponseType";
 import { useEffect, useState } from "react";
-import { keys } from "@/lib/keys";
+
 const useWeather = () => {
   const [location, setLocation] = useState("Baybay City");
   const [weatherData, setWeatherData] = useState<WeatherApiResponse>();
@@ -11,7 +11,7 @@ const useWeather = () => {
     try {
       setLoading(true);
       const forecast = 7;
-      const apiurl = `https://api.weatherapi.com/v1/forecast.json?key=${keys.weatherAPIKey}&q=${location}&days=${forecast}&alerts=yes`;
+      const apiurl = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}&days=${forecast}&alerts=yes`;
 
       const res = await fetch(apiurl);
       const data = await res.json();
